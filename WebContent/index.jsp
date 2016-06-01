@@ -52,8 +52,33 @@
 </head>
 <body>
 <div class="content">
-<div><div><div><div id="dd"><div><div><div><div id="kalen" class="form_login"><div>
+<div><div><div><div id="dd"><div><div><div>
+   
+
+<div id="kalen" class="form_login"><div>
+
 <form action="loginServlet" method="post" onsubmint="">
+
+    <div class="container" id="c4">
+        <div class="container box">
+            <select class="op" name="week" id="list1">
+                <option value="1">行政部</option>
+                <option value="2">市场部</option>
+                <option value="3">销售部</option>
+                <option value="4">技术部</option>
+                <option value="5">人力资源部</option>
+            </select>
+        </div>
+    </div>
+    <div class="container addtion" id="c6">
+         <div class="container box">
+           全职 <input type="radio" checked="checked" name="sex" value="male"/>
+        </div>
+        <div class="container box">
+           兼职 <input type="radio" name="sex" value="female"/>
+        </div>
+    </div>
+    
     <div class="container" id="c1">
         <div class="container box">
             <input class="user_name_input" type="text" placeholder="请输入用户名" name="username"/>
@@ -68,31 +93,66 @@
         <div class="container box">
             <!-- <button  class="btn btn-positive btn-block sb">提交</button> -->
             <button type="submit" class="btn btn-positive btn-block sb">提交</button>
-            
         </div>
     </div>
 </form>
+    <div class="container" id="c5">
 
-<form action="searchServlet" method="post" onsubmint="">
+        <div class="container box">
+            记住密码<input type="checkbox" name="remind">
+        </div>
+        <div class="container box">
+            <a href="http://www.baidu.com" target="_blank">忘记密码？</a>
+        </div>
+    </div>
+    
+    <div class="container table" id="c7">
+   <!--      <textarea name="user_input" id="input3" cols="10" rows="10">asdasdasdasdasdasda</textarea>
+    </div> -->
+    <!-- <a href="http://www.baidu.com" target=_blank>百度</a> -->
+    
+     <table class="table1" width="100%" border="1" cellspace="0" cellpadding="0" height="54" backgroundcolor="white">
+    	<tr>
+    		<th>工号</th>
+    		<th>姓名</th>
+    		<th>职位状态</th>
+    		<th>部门</th>
+    	</tr>
+    	<tr>
+    		<td>001</td>
+    		<td>王娜娜</td>
+    		<td>全职</td>
+    		<td>销售部</td>
+    	</tr>
+    	<tr>
+    		<td>002</td>
+    		<td>李娜</td>
+        	<td>兼职</td>
+    		<td>市场部</td>
+    	</tr>
+    	<tr>
+    		<td>003</td>
+    		<td>李里</td>
+        	<td>兼职</td>
+    		<td>技术部</td>
+    	</tr>
+    	<tr>
+    		<td>004</td>
+    		<td>李安</td>
+        	<td>全职</td>
+    		<td>技术部</td>
+    	</tr>
+    </table> 
+</div>
+   
+<!--  <form action="searchServlet" method="post" onsubmint="">
     First Name:
     <input type="text" id="txt1"
            onkeyup="showHint(this.value)" name="searchtest">
 </form>
 <p>Suggestions: <span id="txtHint"></span>
-</p>
-    <div class="container" id="c4">
-        <div class="container box">
-            <select name="week" id="list1">
-                <option value="1">星期一</option>
-                <option value="2">星期二</option>
-                <option value="3">星期三</option>
-                <option value="4">星期四</option>
-                <option value="5">星期五</option>
-                <option value="6">星期六</option>
-                <option value="7">星期日</option>
-            </select>
-        </div>
-    </div>
+</p> -->
+    
     
     <div class="container" id="cc">
         <div class="container box">
@@ -111,7 +171,7 @@
         </div>
     </div>
     
-    <div class="container" id="c10">
+ <!--    <div class="container" id="c10">
         <div class="container box">
             <select name="" id="list2" multiple=true size=5>
                 <option value="1">RedFlag</option>
@@ -122,54 +182,9 @@
             </select>
         </div>
     </div>
-    <input type="button" onclick="selectMultiple()" >
+    <input type="button" onclick="selectMultiple()" > -->
 
-    <div class="container" id="c5">
-        <div class="container box">
-            是否记住密码<input type="checkbox" name="remind">
-        </div>
-        <div class="container box">
-            <a href="http://localhost:63342/HTML/htmls/DemoHtml.html" target="_blank">忘记密码？</a>
-        </div>
-    </div>
-    <div class="container" id="c6">
-        <div class="container box">
-           男 <input type="radio" checked="checked" name="sex" value="male"/>
-        </div>
-        <div class="container box">
-           女 <input type="radio" name="sex" value="female"/>
-        </div>
-    </div>
-    <div class="container" id="c7">
-        <textarea name="user_input" id="input3" cols="10" rows="10">asdasdasdasdasdasda</textarea>
-    </div>
-    <a href="http://www.baidu.com" target=_blank>百度</a>
-    
-    <table class="table1" width="100%" border="1" cellspace="0" cellpadding="0" height="54" backgroundcolor="white">
-    	<tr>
-    		<th>学号</th>
-    		<th>姓名</th>
-    		<th>班级</th>
-    	</tr>
-    	<tr>
-    		<td>001</td>
-    		<td>王娜娜</td>
-    		<td>01</td>
-    	</tr>
-    	<tr>
-    		<td>002</td>
-    		<td>李娜</td>
-    		<td>01</td>
-    	</tr>
-    	
-    	<tr>
-    		<td>003</td>
-    		<td>李里</td>
-    		<td>01</td>
-    	</tr>
-    
-    </table>
-    
-</div></div></div></div></div></div></div></div></div>
+
+</div></div></div></div></div></div></div></div>
 </body>
 </html>

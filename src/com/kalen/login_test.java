@@ -49,17 +49,14 @@ public class login_test {
 	public void tearDown() throws Exception {
         driver.quit();
 	}
-	/*  用户名  xpath =    kalen */
-	/*  密码 xpath =      111111*/
-	/*  按钮 xpath = */
-//	@Test
+
+//	@Test  //登录测试
 //	public void testLogin() {
 //
 //		sleep(3000);
-//	
 //		driver.findElement(By.xpath(".//*[@id='c1']/div/input")).sendKeys("kalen");
 //		sleep(3000);
-//		driver.findElement(By.xpath(".//*[@id='c2']/div/input")).sendKeys("211111");
+//		driver.findElement(By.xpath(".//*[@id='c2']/div/input")).sendKeys("111111");
 //		sleep(3000);
 //		driver.findElement(By.xpath(".//*[@id='c3']/div/button")).click();
 //		sleep(3000);
@@ -68,6 +65,30 @@ public class login_test {
 //	
 //	}
 	
+//  @Test   //多个窗口时候，找到要操作的窗口，在进行操作。
+//  public void testMuitipleWindows() throws Exception {
+//      String parentWindow="";
+//      parentWindow=driver.getWindowHandle();
+//      WebElement loginLink= driver.findElement(By.xpath(".//*[@id='c5']/div[2]/a"));
+//      loginLink.click();
+//      sleep(3000);
+//      String[] windowsArray= new String[driver.getWindowHandles().size()];
+//      driver.getWindowHandles().toArray(windowsArray);
+//      for (int i =0;i < windowsArray.length; i++){
+//          if(!windowsArray[i].equals(parentWindow)){   //排除法的方式来选择新弹出的窗口
+//              driver.switchTo().window(windowsArray[i]);
+//              System.out.println(driver.getTitle());
+//          }
+//      }
+//          System.out.println(driver.getTitle());
+//          assertEquals("百度一下，你就知道",driver.getTitle());
+//          sleep(1000);
+//          driver.close();
+//          driver.switchTo().window(parentWindow);
+//          assertTrue(driver.getTitle().equals("用户登录"));
+//          sleep(1000);
+//      }
+
 //  @Test   //窗体的操作：最大化窗体、获取窗体的相对于屏幕的位置，调整屏幕的位置，调整屏幕的大小
 //  public void testWindows() throws Exception {
 //
@@ -102,8 +123,8 @@ public class login_test {
 //        sleep(1100);
 //    }
 	
-//    @Test
-//    public void testTable() throws Exception {
+//    @Test  //模拟拖拽操作
+//    public void testdrag() throws Exception {
 //        driver.get("http://jqueryui.com/resources/demos/draggable/scroll.html");
 //        WebElement draggable = driver.findElement(By.id("draggable"));
 //        for (int i = 0; i < 5; i++) {
@@ -140,41 +161,17 @@ public class login_test {
 //  @Test   //使用快捷键操作文字
 //  public void testSearchWord() throws Exception {
 //  	
-//      driver.findElement(By.xpath(".//*[@id='kalen']/div/form/div[1]/div/input")).sendKeys("coderinfo");  // 找到搜索框，输入一些字母
+//      driver.findElement(By.xpath(".//*[@id='c1']/div/input")).sendKeys("coderinfo");  // 找到搜索框，输入一些字母
 //      sleep(1000);
-//      driver.findElement(By.xpath(".//*[@id='kalen']/div/form/div[1]/div/input")).sendKeys(Keys.chord(Keys.COMMAND + "a")); //使用键盘方式 CTRL+a,全选元素中的字符
+//      driver.findElement(By.xpath(".//*[@id='c1']/div/input")).sendKeys(Keys.chord(Keys.COMMAND + "a")); //使用键盘方式 CTRL+a,全选元素中的字符
 //      sleep(1000);
-//      driver.findElement(By.xpath(".//*[@id='kalen']/div/form/div[1]/div/input")).sendKeys(Keys.chord(Keys.COMMAND + "x")); // 使用键盘方式 CTRL+x,剪切元素中的字符
+//      driver.findElement(By.xpath(".//*[@id='c1']/div/input")).sendKeys(Keys.chord(Keys.COMMAND + "x")); // 使用键盘方式 CTRL+x,剪切元素中的字符
 //      sleep(1000);
 //      for (int i=0;i<3;i++)
-//        driver.findElement(By.xpath(".//*[@id='kalen']/div/form/div[1]/div/input")).sendKeys(Keys.chord(Keys.COMMAND + "v"));   // 键盘方式 CTRL+v,粘贴三次选中的字符
+//        driver.findElement(By.xpath(".//*[@id='c1']/div/input")).sendKeys(Keys.chord(Keys.COMMAND + "v"));   // 键盘方式 CTRL+v,粘贴三次选中的字符
 ////      driver.findElement(By.xpath(".//*[@id='kalen']/div/form/div[2]/div/input")).sendKeys(Keys.chord(Keys.SHIFT + "A"));//使用键盘方式输入三个字母A
 //      sleep(3000);
 //  }
-	
-//  @Test   //多个窗口时候，找到要操作的窗口，在进行操作。
-//  public void testMuitipleWindows() throws Exception {
-//      String parentWindow="";
-//      parentWindow=driver.getWindowHandle();
-//      WebElement loginLink= driver.findElement(By.xpath(".//*[@id='kalen']/a"));
-//      loginLink.click();
-//      sleep(3000);
-//      String[] windowsArray= new String[driver.getWindowHandles().size()];
-//      driver.getWindowHandles().toArray(windowsArray);
-//      for (int i =0;i < windowsArray.length; i++){
-//          if(!windowsArray[i].equals(parentWindow)){   //排除法的方式来选择新弹出的窗口
-//              driver.switchTo().window(windowsArray[i]);
-//              System.out.println(driver.getTitle());
-//          }
-//      }
-////          System.out.println(driver.getTitle());
-//          assertEquals("百度一下，你就知道",driver.getTitle());
-//          sleep(1000);
-//          driver.close();
-//          driver.switchTo().window(parentWindow);
-//          assertTrue(driver.getTitle().equals("用户登录"));
-//          sleep(1000);
-//      }
 	
 	
 //  @Test   //弹出 js 对话框的处理，接受 Alert 对话框，选择 prompt 弹出框的取消，选择 confirmation 的确定
@@ -199,9 +196,8 @@ public class login_test {
 //      sleep(1000);
 //      driver.switchTo().alert().accept();						//接受 confiramiton 的弹出框
 //  }
+//	
 	
-	
-    
 //	   @Test  //获取页面链接的各类属性：title、位置、大小、css属性、html标签等
 //	    public void nature() throws Exception {
 //	        driver.manage().window().maximize();//将浏览器最大化
@@ -221,92 +217,74 @@ public class login_test {
 //	        sleep(3000);
 //	    }
 	   
-//	    @Test   //获取文本框的各种属性
-//	    public void testSearchBoxe() throws Exception {
-//	        driver.manage().window().maximize();//将浏览器最大化
-//	        Navigation navigation=driver.navigate();//创建导航对象
-//	        navigation.to("http://localhost:8080/KalenPage/index.jsp");
-//	        WebElement username_box=driver.findElement(By.xpath(".//*[@id='kalen']/div/form/div[1]/div/input"));
-//	        username_box.sendKeys("kalen");
-//	        System.out.println("输入框的文字内容是"+username_box.getAttribute("value"));
-//	        System.out.println("输入框的编辑状态是"+username_box.isEnabled());
-//	        System.out.println("输入框是否显示在页面上"+username_box.isDisplayed());
-//	        System.out.println("输入框是否被选中:"+username_box.isSelected());
-//	        sleep(5000);
-//	        WebElement pwd_box=driver.findElement(By.xpath(".//*[@id='kalen']/div/form/div[2]/div/input"));
-//	        pwd_box.sendKeys("1111");
-//	        System.out.println("输入框的文字内容是"+pwd_box.getAttribute("value"));
-//	        System.out.println("输入框的编辑状态是"+pwd_box.isEnabled());
-//	        System.out.println("输入框是否显示在页面上"+pwd_box.isDisplayed());
-//	        System.out.println("输入框是否被选中:"+pwd_box.isSelected());
-//	        sleep(5000);
-//	    }
-	    
-//	    @Test   //assertTure函数中，使用字符串的contains,startWith和endswith 方法来判断字符串。
-//	    public void testTable() throws Exception {
-//			driver.findElement(By.xpath(".//*[@id='kalen']/div/form/div[1]/div/input")).sendKeys("kalen");
-//			sleep(1000);
-//			driver.findElement(By.xpath(".//*[@id='kalen']/div/form/div[2]/div/input")).sendKeys("111111");
-//			sleep(100);
-//			driver.findElement(By.xpath(".//*[@id='c3']/div/button")).click();
-//			sleep(100);
-//			assertTrue(driver.findElement(By.xpath(".//*/ul[last()]/li[1]")).getText().contains("kalen"));
-//			assertTrue(driver.findElement(By.xpath(".//*/ul[last()]/li[1]")).getText().startsWith("用户名:"));
-//			assertTrue(driver.findElement(By.xpath(".//*/ul[last()]/li[1]")).getText().endsWith("en"));
-//			assertTrue(driver.findElement(By.xpath(".//*/ul[last()]/li[2]")).getText().contains("111111"));
-//			assertTrue(driver.findElement(By.xpath(".//*/ul[last()]/li[2]")).getText().startsWith("密码:"));
-//			assertTrue(driver.findElement(By.xpath(".//*/ul[last()]/li[2]")).getText().endsWith("1"));
-//			sleep(1000);
-//	    }
-	
-//    @Test   //验证下拉列表的所有选项符合期望值
-//    public void testSearchBoxe() throws Exception {
-//    	
-//    	sleep(1000);
-//    	
-//        WebElement select = driver.findElement(By.xpath(".//*[@id='list1']"));
-//        List<WebElement> allOptions = select.findElements(By.tagName("option")); // 找到一个元素后，获取它的子元素对象：通过
-//        // tagName
-//        // 获取下拉列表的所有选项，存储到一个
-//        // list
-//        // 中
-//        List<String> exp_options = Arrays.asList(new String[] { "星期一",
-//            "星期二", "星期三", "星期四","星期五","星期六","星期日" });
-//      
-//        List<String> act_options = new ArrayList<String>();
-//        for (WebElement option : allOptions)
-//            act_options.add(option.getText());
-//        assertEquals(exp_options, act_options);
+//    @Test   //assertTure函数中，使用字符串的contains,startWith和endswith 方法来判断字符串。
+//    public void testTable() throws Exception {
+//		driver.findElement(By.xpath(".//*[@id='c1']/div/input")).sendKeys("kalen");
+//		sleep(1000);
+//		driver.findElement(By.xpath(".//*[@id='c2']/div/input")).sendKeys("111111");
+//		sleep(100);
+//		driver.findElement(By.xpath(".//*[@id='c3']/div/button")).click();
+//		sleep(100);
+//		assertTrue(driver.findElement(By.xpath(".//*/ul[last()]/li[1]")).getText().contains("kalen"));
+//		assertTrue(driver.findElement(By.xpath(".//*/ul[last()]/li[1]")).getText().startsWith("用户名:"));
+//		assertTrue(driver.findElement(By.xpath(".//*/ul[last()]/li[1]")).getText().endsWith("en"));
+//		assertTrue(driver.findElement(By.xpath(".//*/ul[last()]/li[2]")).getText().contains("111111"));
+//		assertTrue(driver.findElement(By.xpath(".//*/ul[last()]/li[2]")).getText().startsWith("密码:"));
+//		assertTrue(driver.findElement(By.xpath(".//*/ul[last()]/li[2]")).getText().endsWith("1"));
+//		sleep(1000);
 //    }
+
+/*
+  @Test   //验证下拉列表的所有选项符合期望值
+  public void testSearchBoxe() throws Exception {
+	  
+  	sleep(1000);
+      WebElement select = driver.findElement(By.xpath(".//*[@id='list1']"));
+      List<WebElement> allOptions = select.findElements(By.tagName("option")); // 找到一个元素后，获取它的子元素对象：通过
+      // tagName
+      // 获取下拉列表的所有选项，存储到一个
+      // list
+      // 中
+      List<String> exp_options = Arrays.asList(new String[] { "行政部",
+          "市场部", "销售部", "技术部","人力资源部"});	
+      List<String> act_options = new ArrayList<String>();
+      for (WebElement option : allOptions)
+          act_options.add(option.getText());
+      assertEquals(exp_options, act_options);
+  }
+*/	
 	
-//	@Test   //遍历一个下拉列表中的所有选项，选中一个自己想要选中的选项
-//    public void testSearchBoxe() throws Exception {
-//        WebElement select = driver.findElement(By.xpath(".//*[@id='list1']"));
-//        List<WebElement> allOptions =  select.findElements(By.tagName("option"));  //找到一个元素后，获取它的子元素对象：通过 tagName 获取下拉列表的所有选项，存储到一个 list 中
-//        for (WebElement option : allOptions) {
-//            System.out.println(String.format("下拉列表显示的文字是: %s", option.getText()));   //遍历 List 中所有的下拉选项的显示文字
-//            System.out.println(String.format("显示文字对应的值是: %s", option.getAttribute("value"))); //遍历 List 中所有的下拉选项显示文字的值
-//            sleep(3000);
-//            option.click();
-//            System.out.println("click "+option.getText());
-//        }
-//        
-//        for (WebElement option : allOptions) {
-//            //System.out.println(String.format("Value is: %s", option.getText()));
-//            if (option.getText().equals("星期六")){		//通过使用下拉框的文本值选中 Saab 的下拉选项
-//                option.click();
-//                System.out.println("-----------------------");
-//                System.out.println("click 星期六");
-//                sleep(6000);
-//            }
-//            if (option.getAttribute("value").equals("1")){      //通过使用 value 选中 Audi的下拉选项
-//                option.click();
-//                System.out.println("-----------------------");
-//                System.out.println("星期一");
-//                sleep(2000);
-//            }
-//        }
-//    }
+/*
+	@Test   //遍历一个下拉列表中的所有选项，选中一个自己想要选中的选项
+    public void testSearchBoxe() throws Exception {
+        WebElement select = driver.findElement(By.xpath(".//*[@id='list1']"));
+        List<WebElement> allOptions =  select.findElements(By.tagName("option"));  //找到一个元素后，获取它的子元素对象：通过 tagName 获取下拉列表的所有选项，存储到一个 list 中
+        for (WebElement option : allOptions) {
+            System.out.println(String.format("下拉列表显示的文字是: %s", option.getText()));   //遍历 List 中所有的下拉选项的显示文字
+            System.out.println(String.format("显示文字对应的值是: %s", option.getAttribute("value"))); //遍历 List 中所有的下拉选项显示文字的值
+            sleep(3000);
+            option.click();
+            System.out.println("click "+option.getText());
+        }
+        
+        for (WebElement option : allOptions) {
+            //System.out.println(String.format("Value is: %s", option.getText()));
+            if (option.getText().equals("技术部")){		//通过使用下拉框的文本值选中 Saab 的下拉选项
+                option.click();
+                System.out.println("-----------------------");
+                System.out.println("click 技术部");
+                sleep(6000);
+            }
+            if (option.getAttribute("value").equals("1")){      //通过使用 value 选中 Audi的下拉选项
+                option.click();
+                System.out.println("-----------------------");
+                System.out.println("行政部");
+                sleep(2000);
+            }
+        }
+    }
+*/	
+	
 	
 //    @Test  //选择复选框和单选框，并且确定选中的状态
 //    public void testCheckBox() throws Exception {
@@ -374,17 +352,31 @@ public class login_test {
 //        }
 //        System.out.println();
 //    }
-	
-//    @Test   //找到包含某个关键字的表格td，找到这个td前一个表格和后一个表格
-//    public void testTable() throws Exception {
-//    	WebElement simpleTable=driver.findElement(By.xpath(".//*[@id='kalen']/table"));
-//        WebElement td=simpleTable.findElement(By.xpath("//td[contains(text(),'李娜')]"));   //通过模糊的方式找到表格中包含某个关键字的表格内容
-//        System.out.println("找到表格的内容是："+td.getText());
-//        WebElement td1=simpleTable.findElement(By.xpath("//td[contains(text(),'李娜')]/following-sibling::td"));   //通过模糊的方式找到表格中包含某个关键字的表格内容
-//        System.out.println("找到下一个表格的内容是-学号："+td1.getText());
-//        WebElement td2=simpleTable.findElement(By.xpath("//td[contains(text(),'李娜')]/preceding-sibling::td"));   //通过模糊的方式找到表格中包含某个关键字的表格内容
-//        System.out.println("找到上一个表格的内容是-班级："+td2.getText());
-//    }
+
+/*
+    @Test   //找到包含某个关键字的表格td，找到这个td前一个表格和后一个表格
+    public void testTable() throws Exception {
+    	WebElement simpleTable=driver.findElement(By.xpath(".//*[@id='kalen']/table"));
+        WebElement td=simpleTable.findElement(By.xpath("//td[contains(text(),'李娜')]"));   //通过模糊的方式找到表格中包含某个关键字的表格内容
+        System.out.println("找到表格的内容是："+td.getText());
+        WebElement td1=simpleTable.findElement(By.xpath("//td[contains(text(),'李娜')]/following-sibling::td"));   //通过模糊的方式找到表格中包含某个关键字的表格内容
+        System.out.println("找到下一个表格的内容是-学号："+td1.getText());
+        WebElement td2=simpleTable.findElement(By.xpath("//td[contains(text(),'李娜')]/preceding-sibling::td"));   //通过模糊的方式找到表格中包含某个关键字的表格内容
+        System.out.println("找到上一个表格的内容是-班级："+td2.getText());
+    }
+  */
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //	 @Test   //cookie的操作：查看 cookie 内容、增加 cookie 内容、删除cookie内容
 //    public void testCookie() throws Exception {
@@ -501,10 +493,7 @@ public class login_test {
 ////            act_options.add(option.getText());
 ////        }
 ////        assertArrayEquals(exp_options.toArray(),act_options.toArray());
-//        
 //        sleep(3000);
-//        
-//        
 ////        act_options.clear();
 ////        List<WebElement> selectedOptions= make.getAllSelectedOptions();
 ////        
@@ -524,4 +513,25 @@ public class login_test {
 ////        sleep(2000);
 ////        assertEquals(0,make.getAllSelectedOptions().size());
 //    }
+  
+//  @Test   //获取文本框的各种属性
+//  public void testSearchBoxe() throws Exception {
+//      driver.manage().window().maximize();//将浏览器最大化
+//      Navigation navigation=driver.navigate();//创建导航对象
+//      navigation.to("http://localhost:8080/KalenPage/index.jsp");
+//      WebElement username_box=driver.findElement(By.xpath(".//*[@id='kalen']/div/form/div[1]/div/input"));
+//      username_box.sendKeys("kalen");
+//      System.out.println("输入框的文字内容是"+username_box.getAttribute("value"));
+//      System.out.println("输入框的编辑状态是"+username_box.isEnabled());
+//      System.out.println("输入框是否显示在页面上"+username_box.isDisplayed());
+//      System.out.println("输入框是否被选中:"+username_box.isSelected());
+//      sleep(5000);
+//      WebElement pwd_box=driver.findElement(By.xpath(".//*[@id='kalen']/div/form/div[2]/div/input"));
+//      pwd_box.sendKeys("1111");
+//      System.out.println("输入框的文字内容是"+pwd_box.getAttribute("value"));
+//      System.out.println("输入框的编辑状态是"+pwd_box.isEnabled());
+//      System.out.println("输入框是否显示在页面上"+pwd_box.isDisplayed());
+//      System.out.println("输入框是否被选中:"+pwd_box.isSelected());
+//      sleep(5000);
+//  }
 }

@@ -9,10 +9,17 @@
 /*login*/
 
 .form_login {
-    width: 80%; 
+    width: 40%; 
     margin-left: auto;
     margin-right: auto;
     margin-top: 1rem;
+}
+
+.op {
+	margin:0;
+	border:1px solid gray;	
+	height: 0.5rem;
+	margin-bottom:15px;
 }
 
 .container {
@@ -22,6 +29,20 @@
     -webkit-box-align: center;
     -webkit-align-items: center;
     /*border: 1px solid red;*/
+}
+
+.container.radios {
+	margin-bottom:0.2rem;
+}
+
+.container.addtion {
+	border:1px solid gray;	
+	 height: 0.5rem;
+	 margin-bottom:15px;
+}
+
+.container.table {
+	margin-top:0.2rem;
 }
 
 .box {
@@ -35,61 +56,63 @@
 
 .box>.user_name_input {
     border: 1px solid gray;
-    height: 2rem;
+    height: 0.5rem;
     line-height: normal;
 }
 
 .box>.password_input {
     border: 1px solid gray;
-    height: 2rem;
+    height: 0.5rem;
     line-height: normal;
 }
 .sb {
    /*  border: 1px solid red; */
-    height: 2rem;
+   padding:0;
+    height: 0.5rem;
+    
 }
 
 [data-dpr="1"] .sb {
 
-    font-size: 36px;
+    font-size: 12px;
 }
 
 [data-dpr="2"] .sb {
 
-    font-size: 48px;
+    font-size: 18px;
 }
 
 [data-dpr="3"] .sb {
 
-    font-size: 72px;
+    font-size: 24px;
 }
 
 [data-dpr="1"] .box>.user_name_input {
 
-    font-size: 36px;
+    font-size: 12px;
 }
 
 [data-dpr="2"] .box>.user_name_input {
 
-    font-size: 48px;
+    font-size: 18px;
 }
 
 [data-dpr="3"] .box>.user_name_input {
 
-    font-size: 72px;
+    font-size: 24px;
 }
 
 [data-dpr="1"] .box>.password_input {
 
-    font-size: 36px;
+    font-size: 12px;
 }
 
 [data-dpr="2"] .box>.password_input {
 
-    font-size: 48px;
+    font-size: 18px;
 }
 
 [data-dpr="3"] .box>.password_input {
 
-    font-size: 72px;
+    font-size: 24px;
 }
