@@ -13,9 +13,9 @@
 	</classpathentry>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
+	<classpathentry kind="lib" path="/Users/kalen/Desktop/apache-tomcat-7.0.68/lib/annotations-api.jar"/>
+	<classpathentry kind="lib" path="/Users/kalen/Desktop/apache-tomcat-7.0.68/lib/servlet-api.jar"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
-	<classpathentry kind="lib" path="/Users/kalen/Desktop/selenium/selenium-2.53.0/selenium-java-2.53.0-srcs.jar"/>
-	<classpathentry kind="lib" path="/Users/kalen/Desktop/selenium/selenium-2.53.0/selenium-java-2.53.0.jar"/>
 	<classpathentry kind="lib" path="/Users/kalen/Desktop/selenium/selenium-2.53.0/libs/apache-mime4j-0.6.jar"/>
 	<classpathentry kind="lib" path="/Users/kalen/Desktop/selenium/selenium-2.53.0/libs/bsh-2.0b4.jar"/>
 	<classpathentry kind="lib" path="/Users/kalen/Desktop/selenium/selenium-2.53.0/libs/cglib-nodep-2.1_3.jar"/>
@@ -37,7 +37,7 @@
 	<classpathentry kind="lib" path="/Users/kalen/Desktop/selenium/selenium-2.53.0/libs/netty-3.5.7.Final.jar"/>
 	<classpathentry kind="lib" path="/Users/kalen/Desktop/selenium/selenium-2.53.0/libs/phantomjsdriver-1.2.1.jar"/>
 	<classpathentry kind="lib" path="/Users/kalen/Desktop/selenium/selenium-2.53.0/libs/testng-6.9.9.jar"/>
-	<classpathentry kind="lib" path="/Users/kalen/Desktop/apache-tomcat-7.0.68/lib/annotations-api.jar"/>
-	<classpathentry kind="lib" path="/Users/kalen/Desktop/apache-tomcat-7.0.68/lib/servlet-api.jar"/>
+	<classpathentry kind="lib" path="/Users/kalen/Desktop/selenium/selenium-2.53.0/selenium-java-2.53.0-srcs.jar"/>
+	<classpathentry kind="lib" path="/Users/kalen/Desktop/selenium/selenium-2.53.0/selenium-java-2.53.0.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>
